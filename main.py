@@ -7,7 +7,9 @@ pygame.init()
 WinSize = (700,400)
 
 #Creating a display
-pygame.display.set_mode(WinSize)
+pygame.display.set_mode(WinSize, 0, 32)
+
+
 
 #Events loop.
 while True:
