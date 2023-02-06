@@ -8,6 +8,11 @@ from ball import Ball
 # Initialize pygame
 pygame.init()
 
+font = pygame.font.SysFont(pygame.font.get_default_font(), 50)
+
+a = 0
+b = 0
+
 # Window dimensions
 width = 700
 height = 400
@@ -22,7 +27,9 @@ screen = pygame.display.set_mode((width, height), 0, 32)
 running = True
 
 paddle_a = Paddle(0, 0)
-paddle_b = Paddle(width-paddle_a.rect.width, 0)
+paddle_b = Paddle(width - 15, 0)
+
+last_pressed = paddle_a
 
 clock = pygame.time.Clock()
 fps = 60
@@ -37,16 +44,16 @@ while running:
 
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
-                paddle_a.rect.y -= 1
+                paddle_a.direction = -1
 
             elif event.key == pygame.K_s:
-                paddle_a.rect.y += 1
+                paddle_a.direction = 1
 
             if event.key == pygame.K_UP:
-                print ("Up pressed")
+                paddle_b.direction = -1
 
             elif event.key == pygame.K_DOWN:
-                print ("Down pressed")
+                paddle_b.direction = 1
 
 
         if event.type == pygame.KEYUP:
@@ -82,9 +89,13 @@ while running:
 
     if pygame.Rect.colliderect(ball.rect, paddle_a.rect):
         ball.direction.x = 1
+        last_pressed = paddle_a
     elif pygame.Rect.colliderect(ball.rect, paddle_b.rect):
         ball.direction.x = -1
+        last_pressed = paddle_b
 
+    paddle_a.update()
+    paddle_b.update()
 
     # Update the display
     pygame.display.update()
