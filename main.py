@@ -10,9 +10,6 @@ pygame.init()
 
 font = pygame.font.SysFont(pygame.font.get_default_font(), 50)
 
-a = 0
-b = 0
-
 # Window dimensions
 width = 700
 height = 400
@@ -83,9 +80,9 @@ while running:
     elif ball.rect.y  <= 0:
         ball.direction.y = 1
     if ball.rect.x + 50 > width:
-        ball.direction.x = -1
+        paddle_a.score += 1
     elif ball.rect.x <= 0:
-        ball.direction.x = 1
+        paddle_b.score += 1
 
     if pygame.Rect.colliderect(ball.rect, paddle_a.rect):
         ball.direction.x = 1
