@@ -2,6 +2,7 @@ import pygame
 
 
 class Ball(pygame.sprite.Sprite):
+        """ A moving ball that can change position based on where it's hit by the paddles """
         def __init__(self, x: int, y: int, radius: int):
                 """
                 x: x position on screen
