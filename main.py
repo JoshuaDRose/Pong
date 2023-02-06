@@ -8,13 +8,14 @@ from ball import Ball
 pygame.init()
 
 # Window dimensions
-window_size = [700, 400]
+width = 700
+height = 400
 
 # Background color
 background_color = (0, 0, 0)
 
 #Creating a display
-screen = pygame.display.set_mode(window_size, 0, 32)
+screen = pygame.display.set_mode((width, height), 0, 32)
 
 # Exit flag for game-loop
 running = True
