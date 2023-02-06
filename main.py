@@ -23,6 +23,8 @@ running = True
 paddle_a = Paddle(0, 0)
 paddle_b = Paddle(width-paddle_a.rect.width, 0)
 
+ball = Ball(width//2, height//2)
+
 
 # Start game-loop
 while running:
