@@ -23,6 +23,20 @@ while running:
 		if event.type == pygame.QUIT:
 			running = False
 			
+		elif event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_w:
+				print ("A_down")
+
+			elif event.key == pygame.K_s:
+				print ("S_down")
+				
+		elif event.type == pygame.KEYUP:
+			if event.key == pygame.K_w:
+				print ("A_up")
+
+			elif event.key == pygame.K_s:
+				print ("S_up")
+			
 	# Update the display
 	pygame.display.update()
 pygame.quit()
