@@ -1,19 +1,28 @@
 import pygame, sys
 
-#Initiating Pygame
+# Initialize pygame
 pygame.init()
 
-#Window dimensions
-WinSize = (700,400)
+# Window dimensions
+window_size = [700, 400]
+
+# Background color
+background_color = (0, 0, 0)
 
 #Creating a display
-Screen = pygame.display.set_mode(WinSize, 0, 32)
+screen = pygame.display.set_mode(window_size, 0, 32)
 
-#Events loop.
+# Exit flag for game-loop
+running = True
+
+# Start game-loop
 while True:
+	screen.fill(background_color)
 	for event in pygame.event.get():
-		
-		#Quits Pygame
 		if event.type == pygame.QUIT:
-			pygame.quit()
-			sys.exit()
+			running = False
+			
+	# Update the display
+	pygame.display.update()
+pygame.quit()
+sys.exit()
