@@ -1,6 +1,9 @@
 import sys
 import pygame
 
+from paddle import Paddle
+from ball import Ball
+
 # Initialize pygame
 pygame.init()
 
