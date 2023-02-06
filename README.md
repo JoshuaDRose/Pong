@@ -1,1 +1,3 @@
-# Example-Repository
+## Pong
+
+A simple pong game.
