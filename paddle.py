@@ -9,13 +9,13 @@ class Paddle(pygame.sprite.Sprite):
                 """
 
                 super().__init__()
-                width = 50
-                height = 150
+                width = 15
+                height = 70
                 self.image = pygame.Surface((width, height))
                 self.rect = self.image.get_rect()
                 
                 self.color = (255, 255, 255)
-                pygame.draw.rect(self.image, self.color, pygame.Rect(x, y, width, height), 0, 10)
+                pygame.draw.rect(self.image, self.color, pygame.Rect(0, 0, width, height), 0, 10)
                 
                 """
                 direction
