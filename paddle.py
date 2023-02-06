@@ -12,7 +12,7 @@ class Paddle(pygame.sprite.Sprite):
                 self.rect = self.image.get_rect()
                 
                 self.color = (255, 255 , 255)
-                pygame.draw.rect(self.image, self.color (x, y))
+                pygame.draw.rect(self.image, self.color, pygame.Rect(x, y, self.rect.width, self.rect.height))
                 
                 """
                 direction
