@@ -11,10 +11,11 @@ class Ball(pygame.sprite.Sprite):
                 """
                 super().__init__()
                 self.image = pygame.Surface([50, 50])
-                self.rect = self.image.get_rect()
+                self.image.set_colorkey((0, 0, 0))
                 
-                self.color = (255, 0, 0)
-                pygame.draw.circle(self.image, self.color, (x, y), radius)
+                self.color = (255, 255, 255)
+                pygame.draw.circle(self.image, self.color, (25, 25), radius)
+                self.rect = self.image.get_rect()
                 
                 """
                 direction
@@ -32,5 +33,5 @@ class Ball(pygame.sprite.Sprite):
                 
         def update(self):
                 """ Moves the ball according to self.direction """
-                self.rect.x = self.rect.x + self.direction.x
-                self.rect.y = self.rect.y + self.direction.y
+                self.rect.x += self.direction.x
+                self.rect.y += self.direction.y

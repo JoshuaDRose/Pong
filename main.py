@@ -24,7 +24,9 @@ running = True
 paddle_a = Paddle(0, 0)
 paddle_b = Paddle(width-paddle_a.rect.width, 0)
 
-ball = Ball(width//2, height//2, 15)
+clock = pygame.time.Clock()
+fps = 30
+ball = Ball(width // 2, height // 2, 15)
 
 
 # Start game-loop
@@ -55,6 +57,7 @@ while running:
 
     # Update the display
     pygame.display.update()
+    clock.tick(fps)
 
 pygame.quit()
 sys.exit()
