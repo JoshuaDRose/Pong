@@ -15,6 +15,5 @@ while True:
 		
 		#Quits Pygame
 		if event.type == pygame.QUIT:
-			print ("(:-))-|---<")
 			pygame.quit()
 			sys.exit()
