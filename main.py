@@ -19,6 +19,10 @@ screen = pygame.display.set_mode(window_size, 0, 32)
 # Exit flag for game-loop
 running = True
 
+paddle_a = Paddle(0, 0)
+paddle_b = Paddle(0, 0)
+
+
 # Start game-loop
 while running:
 	screen.fill(background_color)
