@@ -1,4 +1,4 @@
-""" This is a docstring"""
+
 import sys
 import pygame
 
