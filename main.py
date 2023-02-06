@@ -17,7 +17,7 @@ screen = pygame.display.set_mode(window_size, 0, 32)
 running = True
 
 # Start game-loop
-while True:
+while running:
 	screen.fill(background_color)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
