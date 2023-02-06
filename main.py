@@ -20,6 +20,8 @@ background_color = (0, 0, 0)
 #Creating a display
 screen = pygame.display.set_mode((width, height), 0, 32)
 
+pygame.display.set_caption("Pong")
+
 # Exit flag for game-loop
 running = True
 
