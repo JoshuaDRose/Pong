@@ -49,6 +49,19 @@ while running:
                 print ("Down pressed")
 
 
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_w:
+                paddle_a.direction = 0
+
+            elif event.key == pygame.K_s:
+                paddle_a.direction = 0
+
+            if event.key == pygame.K_UP:
+                paddle_b.direction = 0
+
+            elif event.key == pygame.K_DOWN:
+                paddle_b.direction = 0
+
     # fill the screen
     screen.fill(background_color)
 

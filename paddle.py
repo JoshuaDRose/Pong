@@ -10,6 +10,7 @@ class Paddle(pygame.sprite.Sprite):
 
                 super().__init__()
                 width = 15
+                self.direction = 1
                 height = 70
                 self.image = pygame.Surface((width, height))
                 self.rect = self.image.get_rect()
