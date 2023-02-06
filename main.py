@@ -25,17 +25,29 @@ while running:
 			
 		elif event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_w:
-				print ("A_down")
+				print ("A pressed")
 
 			elif event.key == pygame.K_s:
-				print ("S_down")
+				print ("S pressed")
+				
+			elif event.key == pygame.K_UP:
+				print ("Up pressed")
+
+			elif event.key == pygame.K_DOWN:
+				print ("Down pressed")
 				
 		elif event.type == pygame.KEYUP:
 			if event.key == pygame.K_w:
-				print ("A_up")
+				print ("A released")
 
 			elif event.key == pygame.K_s:
-				print ("S_up")
+				print ("S released")
+				
+			elif event.key == pygame.K_UP:
+				print ("Up released")
+
+			elif event.key == pygame.K_DOWN:
+				print ("Down released")
 			
 	# Update the display
 	pygame.display.update()
