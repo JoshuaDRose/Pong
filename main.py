@@ -20,7 +20,7 @@ screen = pygame.display.set_mode(window_size, 0, 32)
 running = True
 
 paddle_a = Paddle(0, 0)
-paddle_b = Paddle(paddle_a.rect.width-width, 0)
+paddle_b = Paddle(width-paddle_a.rect.width, 0)
 
 
 # Start game-loop
