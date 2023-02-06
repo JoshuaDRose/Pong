@@ -1,5 +1,6 @@
 import pygame
 
+
 class Paddle(pygame.sprite.Sprite):
         def __init__(self, x: int, y: int):
                 """
