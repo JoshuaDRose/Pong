@@ -14,7 +14,7 @@ class Ball(pygame.sprite.Sprite):
                 self.rect = self.image.get_rect()
                 
                 self.color = (255, 0, 0)
-                pygame.draw.circle(self.image, self.color (x, y), radius)
+                pygame.draw.circle(self.image, self.color, (x, y), radius)
                 
                 """
                 direction
