@@ -26,11 +26,9 @@ running = True
 paddle_a = Paddle(0, 0)
 paddle_b = Paddle(width - 15, 0)
 
-last_pressed = paddle_a
-
 clock = pygame.time.Clock()
-fps = 60
 ball = Ball(width // 2, height // 2, 15)
+fps = 60
 
 
 # Start game-loop
@@ -72,24 +70,29 @@ while running:
     screen.blit(paddle_a.image, paddle_a.rect)
     screen.blit(paddle_b.image, paddle_b.rect)
 
-    ball.draw(screen)
-    ball.update()
-
-    if ball.rect.y +50 > height:
+    if ball.rect.y + 50 > height:
         ball.direction.y = -1
     elif ball.rect.y  <= 0:
         ball.direction.y = 1
-    if ball.rect.x + 50 > width:
+
+    if ball.rect.x > width:
         paddle_a.score += 1
-    elif ball.rect.x <= 0:
+        ball.respawn()
+    elif ball.rect.x < 0 - 50:
         paddle_b.score += 1
+        ball.respawn()
 
     if pygame.Rect.colliderect(ball.rect, paddle_a.rect):
         ball.direction.x = 1
-        last_pressed = paddle_a
     elif pygame.Rect.colliderect(ball.rect, paddle_b.rect):
         ball.direction.x = -1
-        last_pressed = paddle_b
+
+    ball.draw(screen)
+
+    screen.blit(font.render(str(paddle_a.score), True, (255, 255, 255)), (100, 100))
+    screen.blit(font.render(str(paddle_b.score), True, (255, 255, 255)), (500, 100))
+
+    ball.update()
 
     paddle_a.update()
     paddle_b.update()

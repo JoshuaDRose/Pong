@@ -35,3 +35,8 @@ class Ball(pygame.sprite.Sprite):
                 """ Moves the ball according to self.direction """
                 self.rect.x += self.direction.x
                 self.rect.y += self.direction.y
+
+        def respawn(self):
+            print("Respawn function was called")
+            self.rect.x = 100
+            self.rect.y = 100
