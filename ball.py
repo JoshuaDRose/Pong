@@ -2,11 +2,18 @@ import pygame
 
 
 class Ball(pygame.sprite.Sprite):
-        def __init__(self, x, y, radius):
+        def __init__(self, x: int, y: int, radius: int):
+                """
+                x: x position on screen
+                y: y position on screen
+                radius: radius of circle
+                """
                 super().__init__()
                 self.image = pygame.Surface([50, 50])
                 self.rect = self.image.get_rect()
-                pygame.draw.circle(self.image, (255, 0, 0), pygame.Rect(100, 100, self.rect.width, self.rect.height))
+                
+                self.color = (255, 0, 0)
+                pygame.draw.circle(self.image, self.color (x, y), radius)
                 
                 """
                 direction
