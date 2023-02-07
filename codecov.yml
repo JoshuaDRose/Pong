@@ -1,0 +1,8 @@
+profiling:
+  critical_files_paths:
+    - ball.py
+    - paddle.py
+    - main.py
+
+comment:
+  show_critical_paths: true
